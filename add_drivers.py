@@ -17,17 +17,7 @@ def add_driver(
     else:
         d = source.driver_add( prop ).driver
     
-    # Remove old variables
-    for v in d.variables:
-        d.variables.remove(v)
-
-    v = d.variables.new()
-    v.name                 = 'var'
-    v.targets[0].id_type   = 'KEY'
-    v.targets[0].id        = target
-    v.targets[0].data_path = dataPath
-    
-    d.type = 'AVERAGE'
+-
 
 
 def shape_keys_drivers (debug = False):
